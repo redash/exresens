@@ -10,7 +10,10 @@ public:
 	double UpperLimit(){return xMax;}
 	double LimitsRange(){return xMax-xMin;}
 	bool PointInLimits(double x){return (x>=xMin && x<=xMax);}
-	double operator ()(double x){return x*x*x;} //FIXME
+	double operator ()(double x){return Eval(x);}
+	virtual bool IsEmpty(){return true;}
+	virtual double Eval( double x){return 0;}
+
 protected:
 	double xMin, xMax;
 };

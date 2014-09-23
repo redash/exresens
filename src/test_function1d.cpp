@@ -8,9 +8,9 @@ double fRand(double fMin, double fMax)
     return fMin + f * (fMax - fMin);
 }
 ///------------------tests-------------------------
-TEST ( Function1d_Test, DefaultConstructorRange){
+TEST ( Function1d_Test, DefaultConstructor){
 	Function1d fun;
-	EXPECT_DOUBLE_EQ(fun.LimitsRange(), 0.0);
+	EXPECT_TRUE(fun.IsEmpty());
 }
 
 TEST ( Function1d_Test, RandomConstructorRange){
